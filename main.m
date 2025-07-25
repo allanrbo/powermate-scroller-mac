@@ -27,7 +27,7 @@ void handleInput(void *context, IOReturn result, void *sender, IOHIDValueRef val
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        IOHIDManagerRef manager = IOHIDManagerCreate(kCFAllocatorDefault, kIOHIDOptionsTypeNone);
+        IOHIDManagerRef manager = IOHIDManagerCreate(kCFAllocatorDefault, kIOHIDOptionsTypeSeizeDevice);
 
         NSDictionary *criteria = @{
             @kIOHIDVendorIDKey: @(0x077d),
